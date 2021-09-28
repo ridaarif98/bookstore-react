@@ -30,11 +30,18 @@ const Books = () => {
     setInfo(JSON.parse(localStorage.getItem('storeBook')));
   }
 
+  const removeBook = (book) => {
+    const updateBookList = bookInfo.filter((bkInfo)=> bkInfo!== book);
+    localStorage.setItem('storeBook', JSON.stringify(updateBookList));
+    setInfo(JSON.parse(localStorage.getItem('storeBook')));
+  };
+
   const displayBooks = bookInfo.map((bk)=> (
     <Book
       title = {bk.title}
       author = {bk.author}
       key = {bookInfo.indexOf(bk)}
+      removeBook = {() => removeBook(bk)}
     />
   ));
 
