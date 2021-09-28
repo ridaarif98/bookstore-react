@@ -47,7 +47,7 @@ const Books = () => {
 
   return(
     <div>
-       <ul>
+       <ul className="allBooks">
           {displayBooks}
       </ul>
       <Form addBooks= {addBooks}/>

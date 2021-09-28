@@ -15,10 +15,10 @@ const Navbar = () => {
         },
     ]
     return (
-      <nav>
+      <nav className="navbar">
         <ul>
           {links.map(link => {
-          return <li key={link.id}><Link to={link.path}>{link.text}</Link></li>
+          return <li key={link.id}><Link to={link.path} className="links">{link.text}</Link></li>
           })}
         </ul>
       </nav>
