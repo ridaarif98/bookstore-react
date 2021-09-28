@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
 
-const Form = (props) => {
+const Form = ({addBooks}) => {
   const [book, setBook] = useState({});
 
   const onChange = e => {
@@ -9,7 +9,7 @@ const Form = (props) => {
   };
 
   const handleSubmit = e => {
-    props.addBooks();
+    addBooks(book);
     e.preventDefault();
   };
 

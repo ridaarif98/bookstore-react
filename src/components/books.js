@@ -30,10 +30,20 @@ const Books = () => {
     setInfo(JSON.parse(localStorage.getItem('storeBook')));
   }
 
+  const displayBooks = bookInfo.map((bk)=> (
+    <Book
+      title = {bk.title}
+      author = {bk.author}
+      key = {bookInfo.indexOf(bk)}
+    />
+  ));
+
   return(
     <div>
       <Form addBooks= {addBooks}/>
-      <Book />
+      <ul>
+          {displayBooks}
+      </ul>
     </div>
   );
 }
