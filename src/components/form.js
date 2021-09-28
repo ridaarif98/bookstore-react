@@ -10,6 +10,8 @@ const Form = ({ addBooks }) => {
 
   const handleSubmit = (e) => {
     addBooks(book);
+    book.title = '';
+    book.author = '';
     e.preventDefault();
   };
 

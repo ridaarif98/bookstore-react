@@ -17,15 +17,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <ul>
-        {links.map((link) => {
-          return (
-            <li key={link.id}>
-              <Link to={link.path} className="links">
-                {link.text}
-              </Link>
-            </li>
-          );
-        })}
+        {links.map((link) => <li key={link.id}><Link to={link.path} className="links">{link.text}</Link></li>)}
       </ul>
     </nav>
   );
