@@ -22,7 +22,7 @@ const Books = () => {
   }
 
   const [bookInfo, setInfo] = useState(
-    JSON.parse(localStorage.getItem('storeBook'))
+    JSON.parse(localStorage.getItem('storeBook')),
   );
 
   const addBooks = (book) => {
