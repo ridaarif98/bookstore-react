@@ -47,10 +47,10 @@ const Books = () => {
 
   return(
     <div>
-      <Form addBooks= {addBooks}/>
-      <ul>
+       <ul>
           {displayBooks}
       </ul>
+      <Form addBooks= {addBooks}/>
     </div>
   );
 }
