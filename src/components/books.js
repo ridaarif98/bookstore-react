@@ -17,7 +17,7 @@ const Books = () => {
       author: book.author,
     };
     dispatch(addBook(newBook));
-    localStorage.setItem('storeBook',JSON.stringify(store.getState().booksReducer));
+    localStorage.setItem('storeBook', JSON.stringify(store.getState().booksReducer));
     setInfo(JSON.parse(localStorage.getItem('storeBook')));
   };
 
