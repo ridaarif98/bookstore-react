@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Form = ({ addBooks }) => {
+const Form = ({ addBook }) => {
   const [book, setBook] = useState({});
 
   const onChange = (e) => {
@@ -9,7 +9,7 @@ const Form = ({ addBooks }) => {
   };
 
   const handleSubmit = (e) => {
-    addBooks(book);
+    addBook(book);
     book.title = '';
     book.author = '';
     e.preventDefault();
@@ -39,6 +39,6 @@ const Form = ({ addBooks }) => {
 };
 
 Form.propTypes = {
-  addBooks: PropTypes.func.isRequired,
+  addBook: PropTypes.func.isRequired,
 };
 export default Form;
