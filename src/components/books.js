@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid';
 import store from '../redux/configureStore';
-import {addBook, removeBook} from '../redux/books/books';
+import { addBook, removeBook } from '../redux/books/books';
 import Form from './form';
 import Book from './book';
 
@@ -14,17 +14,22 @@ const Books = () => {
     const newBook = {
       id: uuidv4(),
       title: book.title,
-      author: book.author
+      author: book.author,
     };
     dispatch(addBook(newBook));
-    localStorage.setItem('storeBook', JSON.stringify(store.getState().booksReducer));
+    localStorage.setItem(
+      'storeBook',
+      JSON.stringify(store.getState().booksReducer)
+    );
     setInfo(JSON.parse(localStorage.getItem('storeBook')));
   };
 
   const rmBook = (book) => {
-    // const updateBookList = bookInfo.filter((bkInfo) => bkInfo !== book);
-    dispatch(removeBook(book))
-    localStorage.setItem('storeBook', JSON.stringify(store.getState().booksReducer));
+    dispatch(removeBook(book));
+    localStorage.setItem(
+      'storeBook',
+      JSON.stringify(store.getState().booksReducer)
+    );
     setInfo(JSON.parse(localStorage.getItem('storeBook')));
   };
 
