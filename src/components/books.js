@@ -1,34 +1,23 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from "uuid";
+import store from '../redux/configureStore';
+import {addBook, removeBook} from '../redux/books/books';
 import Form from './form';
 import Book from './book';
 
 const Books = () => {
-  if (JSON.parse(localStorage.getItem('storeBook')) === null) {
-    const initialBooks = [
-      {
-        title: 'Book 1',
-        author: 'Author 1',
-      },
-      {
-        title: 'Book 2',
-        author: 'Author 2',
-      },
-      {
-        title: 'Book 3',
-        author: 'Author 3',
-      },
-    ];
-    localStorage.setItem('storeBook', JSON.stringify(initialBooks));
-  }
+  const dispatch = useDispatch();
+  const [bookInfo, setInfo] = useState(store.getState().booksReducer);
 
-  const [bookInfo, setInfo] = useState(
-    JSON.parse(localStorage.getItem('storeBook')),
-  );
-
-  const addBooks = (book) => {
-    const newBook = bookInfo;
-    newBook.push(book);
-    localStorage.setItem('storeBook', JSON.stringify(newBook));
+  const submitBookToStore = (book) => {
+    const newBook = {
+      id: uuidv4(),
+      title: book.title,
+      author: book.author
+    };
+    dispatch(addBook(newBook));
+    localStorage.setItem('storeBook', JSON.stringify(store.getState().booksReducer));
     setInfo(JSON.parse(localStorage.getItem('storeBook')));
   };
 
@@ -50,7 +39,7 @@ const Books = () => {
   return (
     <div>
       <ul className="allBooks">{displayBooks}</ul>
-      <Form addBooks={addBooks} />
+      <Form addBooks={submitBookToStore} />
     </div>
   );
 };
