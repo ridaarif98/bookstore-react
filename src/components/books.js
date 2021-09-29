@@ -21,9 +21,10 @@ const Books = () => {
     setInfo(JSON.parse(localStorage.getItem('storeBook')));
   };
 
-  const removeBook = (book) => {
-    const updateBookList = bookInfo.filter((bkInfo) => bkInfo !== book);
-    localStorage.setItem('storeBook', JSON.stringify(updateBookList));
+  const rmBook = (book) => {
+    // const updateBookList = bookInfo.filter((bkInfo) => bkInfo !== book);
+    dispatch(removeBook(book))
+    localStorage.setItem('storeBook', JSON.stringify(store.getState().booksReducer));
     setInfo(JSON.parse(localStorage.getItem('storeBook')));
   };
 
@@ -32,7 +33,7 @@ const Books = () => {
       title={bk.title}
       author={bk.author}
       key={bookInfo.indexOf(bk)}
-      removeBook={() => removeBook(bk)}
+      rmBook={() => rmBook(bk)}
     />
   ));
 
