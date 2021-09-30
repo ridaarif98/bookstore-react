@@ -1,16 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = (props) => {
-  const { title, author, rmBook } = props;
+// const Book = (props) => {
+//   const { title, author, rmBook } = props;
+//   return (
+//     <li>
+//       <span>{title}</span>
+//       <span>{author}</span>
+//       <button type="button" onClick={rmBook}>
+//         Remove
+//       </button>
+//     </li>
+//   );
+// };
+
+const Book = ({books}) => {
   return (
-    <li>
-      <span>{title}</span>
-      <span>{author}</span>
-      <button type="button" onClick={rmBook}>
-        Remove
-      </button>
-    </li>
+    <ul className="allBooks">
+      
+        {books.map((book)=>(
+        <li>  <span>{book.title} {book.category}</span></li>
+        ))}
+      
+    </ul>
+    // <li>
+    //   <span>{title}</span>
+    //   <span>{author}</span>
+    //   <button type="button" onClick={rmBook}>
+    //     Remove
+    //   </button>
+    // </li>
   );
 };
 
