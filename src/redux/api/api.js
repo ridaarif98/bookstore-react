@@ -33,5 +33,5 @@ export const deleteBook = (btnId, dispatch) => {
       if (res.status === 201) {
         dispatch(removeBook(btnId));
       }
-    });
+    }).catch((error) => error);
 };

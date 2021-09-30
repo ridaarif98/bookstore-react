@@ -5,7 +5,7 @@ import { deleteBook } from '../redux/api/api';
 
 const Book = ({ books }) => {
   const dispatch = useDispatch();
-  
+
   return (
     <ul className="allBooks">
       {books.map((book) => (
@@ -14,7 +14,7 @@ const Book = ({ books }) => {
             {book.title}
             {book.category}
           </span>
-          <button type="button" id={book.item_id} onClick={()=> deleteBook(book.item_id, dispatch)}>
+          <button type="button" id={book.item_id} onClick={() => deleteBook(book.item_id, dispatch)}>
             Remove
           </button>
         </li>
