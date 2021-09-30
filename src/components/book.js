@@ -4,19 +4,6 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { removeBook }  from '../redux/books/books';
 
-// const Book = (props) => {
-//   const { title, author, rmBook } = props;
-//   return (
-//     <li>
-//       <span>{title}</span>
-//       <span>{author}</span>
-//       <button type="button" onClick={rmBook}>
-//         Remove
-//       </button>
-//     </li>
-//   );
-// };
-
 const Book = ({books}) => {
   const dispatch = useDispatch();
   const deleteBook = (e) => {

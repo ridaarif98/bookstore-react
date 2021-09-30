@@ -5,47 +5,6 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { addBook } from '../redux/books/books';
 
-// const Form = ({ addBook }) => {
-//   const [book, setBook] = useState({});
-
-//   const onChange = (e) => {
-//     setBook({ ...book, [e.target.name]: [e.target.value] });
-//   };
-
-//   const handleSubmit = (e) => {
-//     addBook(book);
-//     book.title = '';
-//     book.author = '';
-//     e.preventDefault();
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit} className="bookForm">
-//       <input
-//         type="text"
-//         placeholder="title"
-//         value={book.title}
-//         name="title"
-//         onChange={onChange}
-//       />
-//       <input
-//         type="text"
-//         placeholder="author"
-//         value={book.author}
-//         name="author"
-//         onChange={onChange}
-//       />
-//       <button className="input-submit" type="submit">
-//         Submit
-//       </button>
-//     </form>
-//   );
-// };
-
-// Form.propTypes = {
-//   addBook: PropTypes.func.isRequired,
-// };
-
 const Form = () => {
   const dipatch = useDispatch();
   const [title, setTitle] = useState('');
@@ -90,6 +49,7 @@ const Form = () => {
           <option value="Action">Action</option>
           <option value="Science Fiction">Science Fiction</option>
           <option value="Economy">Economy</option>
+          <option value="Fairy Tales">Fairy Tales</option>
         </select>
       <button className="input-submit" type="submit">
         Submit

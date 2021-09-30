@@ -2,13 +2,7 @@ const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const SET_BOOKS = 'bookStore/books/SET_BOOKS';
 
-// if (JSON.parse(localStorage.getItem('storeBook')) === null) {
-//   localStorage.setItem('storeBook', JSON.stringify([]));
-// }
-
-// const initialState = JSON.parse(localStorage.getItem('storeBook'));
 const initialState = [];
-
 
 export const addBook = (payload) => ({
   type: ADD_BOOK,
