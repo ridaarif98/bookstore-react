@@ -1,36 +1,43 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
+import { useDispatch } from 'react-redux';
+import { createBook } from '../redux/api/api';
 
-const Form = ({ addBook }) => {
-  const [book, setBook] = useState({});
+const Form = () => {
+  const dispatch = useDispatch();
+  const [title, setTitle] = useState('');
+  const [category, setCategory] = useState('Action');
 
-  const onChange = (e) => {
-    setBook({ ...book, [e.target.name]: [e.target.value] });
-  };
-
-  const handleSubmit = (e) => {
-    addBook(book);
-    book.title = '';
-    book.author = '';
+  const submitBookToStore = (e) => {
     e.preventDefault();
+    const book = {
+      item_id: uuidv4(),
+      title,
+      category,
+    };
+    dispatch(createBook(book));
+    setTitle('');
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bookForm">
+    <form onSubmit={submitBookToStore} className="bookForm">
       <input
         type="text"
         placeholder="title"
-        value={book.title}
+        value={title}
         name="title"
-        onChange={onChange}
+        required
+        onChange={(e) => setTitle(e.target.value)}
       />
-      <input
-        type="text"
-        placeholder="author"
-        value={book.author}
-        name="author"
-        onChange={onChange}
-      />
+      <select
+        placeholder="Categorie"
+        onChange={(e) => setCategory(e.target.value)}
+      >
+        <option value="Action">Action</option>
+        <option value="Science Fiction">Science Fiction</option>
+        <option value="Economy">Economy</option>
+        <option value="Fairy Tales">Fairy Tales</option>
+      </select>
       <button className="input-submit" type="submit">
         Submit
       </button>
@@ -38,7 +45,4 @@ const Form = ({ addBook }) => {
   );
 };
 
-Form.propTypes = {
-  addBook: PropTypes.func.isRequired,
-};
 export default Form;
