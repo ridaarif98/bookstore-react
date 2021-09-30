@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
 import axios from 'axios';
 import { setBooks } from '../redux/books/books';
 import Form from './form';
@@ -15,7 +14,7 @@ const Books = () => {
   const loadBooks = async () => {
     const booksGet = await axios
       .get(
-        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KP5PI7hEkMIt6Rn76UzC/books'
+        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KP5PI7hEkMIt6Rn76UzC/books',
       )
       .then((res) => res.data);
     dispatch(setBooks(booksGet));

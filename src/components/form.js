@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-//import PropTypes from 'prop-types';
+//  import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
@@ -14,11 +14,10 @@ const Form = () => {
     axios
       .post(
         'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KP5PI7hEkMIt6Rn76UzC/books',
-        newBook
+        newBook,
       )
       .then((res) => {
         if (res.status === 201) {
-          console.log('suucess');
           dipatch(addBook(newBook));
         }
       })
