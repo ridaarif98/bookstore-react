@@ -10,7 +10,7 @@ export const loadBooks = async (dispatch) => {
   dispatch(setBooks(booksGet));
 };
 
-export const createBook = (newBook, dispatch) => {
+export const createBook = (newBook)=> async (dispatch) => {
   axios
     .post(
       'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KP5PI7hEkMIt6Rn76UzC/books',
@@ -24,7 +24,7 @@ export const createBook = (newBook, dispatch) => {
     .catch((error) => error);
 };
 
-export const deleteBook = (btnId, dispatch) => {
+export const deleteBook = (btnId) => async (dispatch) => {
   axios
     .delete(
       `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KP5PI7hEkMIt6Rn76UzC/books/${btnId}`,

@@ -15,7 +15,7 @@ const Form = () => {
       title,
       category,
     };
-    createBook(book, dispatch);
+    dispatch(createBook(book));
     setTitle('');
   };
 

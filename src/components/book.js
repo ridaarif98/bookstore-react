@@ -14,7 +14,7 @@ const Book = ({ books }) => {
             {book.title}
             {book.category}
           </span>
-          <button type="button" id={book.item_id} onClick={() => deleteBook(book.item_id, dispatch)}>
+          <button type="button" id={book.item_id} onClick={() => dispatch(deleteBook(book.item_id))}>
             Remove
           </button>
         </li>

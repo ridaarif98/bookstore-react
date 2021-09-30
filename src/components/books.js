@@ -10,7 +10,7 @@ const Books = () => {
   // useSelector allows you to extract data from react store
   const books = useSelector((state) => state.books);
   useEffect(() => {
-    loadBooks(dispatch);
+    dispatch(loadBooks);
   }, []);
 
   return (
