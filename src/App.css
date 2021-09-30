@@ -1,19 +1,40 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: #fafafa;
+}
+
+header {
+  height: 4rem;
+  margin: 0 0 2.375rem;
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar {
   display: flex;
   flex-direction: row;
-  height: 30px;
-  width: 100%;
-  border-bottom: 1px solid grey;
-  padding: 5px 0;
+  background-color: #fff;
+  line-height: 2rem;
+  font-size: 0.813rem;
+  font-weight: normal;
+  color: #121212;
+  letter-spacing: 1.9px;
+  padding: 12px 0;
+}
+
+.navbar h1 {
+  font-size: 1.875rem;
+  background-color: #fff;
+  font-weight: bold;
+  font-stretch: normal;
+  color: #0290ff;
+  padding-left: 30px;
 }
 
 .navbar ul {
   display: flex;
+  background-color: #fff;
   flex-direction: row;
   list-style-type: none;
 }
@@ -25,11 +46,13 @@
 .navbar ul li {
   padding: 0 20px;
   font-size: 20px;
+  background-color: #fff;
 }
 
 .navbar ul li .links {
   text-decoration: none;
-  color: black;
+  background-color: #fff;
+  color: #121212;
 }
 
 .allBooks {
