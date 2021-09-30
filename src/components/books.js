@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
-import { setBooks } from '../redux/books/books';
+import { loadBooks } from '../redux/api/api';
 import Form from './form';
 import Book from './book';
 
@@ -10,18 +9,8 @@ const Books = () => {
 
   // useSelector allows you to extract data from react store
   const books = useSelector((state) => state.books);
-
-  const loadBooks = async () => {
-    const booksGet = await axios
-      .get(
-        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KP5PI7hEkMIt6Rn76UzC/books',
-      )
-      .then((res) => res.data);
-    dispatch(setBooks(booksGet));
-  };
-
   useEffect(() => {
-    loadBooks();
+    loadBooks(dispatch);
   }, []);
 
   return (

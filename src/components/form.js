@@ -1,28 +1,12 @@
 import React, { useState } from 'react';
-//  import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import axios from 'axios';
-import { addBook } from '../redux/books/books';
+import { createBook } from '../redux/api/api';
 
 const Form = () => {
-  const dipatch = useDispatch();
+  const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('Action');
-
-  const createBook = (newBook) => {
-    axios
-      .post(
-        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KP5PI7hEkMIt6Rn76UzC/books',
-        newBook,
-      )
-      .then((res) => {
-        if (res.status === 201) {
-          dipatch(addBook(newBook));
-        }
-      })
-      .catch((error) => error);
-  };
 
   const submitBookToStore = (e) => {
     e.preventDefault();
@@ -31,7 +15,7 @@ const Form = () => {
       title,
       category,
     };
-    createBook(book);
+    createBook(book, dispatch);
     setTitle('');
   };
 
