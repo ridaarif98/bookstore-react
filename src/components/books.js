@@ -8,13 +8,16 @@ import Book from './book';
 
 const Books = () => {
   const dispatch = useDispatch();
+
   // useSelector allows you to extract data from react store
   const books = useSelector((state) => state.books);
 
   const loadBooks = async () => {
-    const booksGet = await axios.get(
-      'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KP5PI7hEkMIt6Rn76UzC/books'
-    ).then((res)=>res.data);
+    const booksGet = await axios
+      .get(
+        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KP5PI7hEkMIt6Rn76UzC/books'
+      )
+      .then((res) => res.data);
     dispatch(setBooks(booksGet));
   };
 
@@ -24,7 +27,7 @@ const Books = () => {
 
   return (
     <div>
-      <Book books={books}/>
+      <Book books={books} />
       <Form />
     </div>
   );

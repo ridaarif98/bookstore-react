@@ -11,16 +11,19 @@ const Form = () => {
   const [category, setCategory] = useState('Action');
 
   const createBook = (newBook) => {
-    axios.post(
-      'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KP5PI7hEkMIt6Rn76UzC/books',
-      newBook,
-    ).then((res)=>{
-      if(res.status===201) {
-        console.log("suucess");
-        dipatch(addBook(newBook));
-      }
-    }).catch((error)=>error);
-  }
+    axios
+      .post(
+        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KP5PI7hEkMIt6Rn76UzC/books',
+        newBook
+      )
+      .then((res) => {
+        if (res.status === 201) {
+          console.log('suucess');
+          dipatch(addBook(newBook));
+        }
+      })
+      .catch((error) => error);
+  };
 
   const submitBookToStore = (e) => {
     e.preventDefault();
@@ -31,31 +34,32 @@ const Form = () => {
     };
     createBook(book);
     setTitle('');
-  }
+  };
 
-  return(
-        <form onSubmit={submitBookToStore} className="bookForm">
+  return (
+    <form onSubmit={submitBookToStore} className="bookForm">
       <input
         type="text"
         placeholder="title"
         value={title}
         name="title"
-        onChange={(e)=> setTitle(e.target.value)}
+        required
+        onChange={(e) => setTitle(e.target.value)}
       />
       <select
-          placeholder="Categorie"
-          onChange={(e) => setCategory(e.target.value)}
-        >
-          <option value="Action">Action</option>
-          <option value="Science Fiction">Science Fiction</option>
-          <option value="Economy">Economy</option>
-          <option value="Fairy Tales">Fairy Tales</option>
-        </select>
+        placeholder="Categorie"
+        onChange={(e) => setCategory(e.target.value)}
+      >
+        <option value="Action">Action</option>
+        <option value="Science Fiction">Science Fiction</option>
+        <option value="Economy">Economy</option>
+        <option value="Fairy Tales">Fairy Tales</option>
+      </select>
       <button className="input-submit" type="submit">
         Submit
       </button>
     </form>
-
   );
-}
+};
+
 export default Form;
