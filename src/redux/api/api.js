@@ -10,7 +10,7 @@ export const loadBooks = async (dispatch) => {
   dispatch(setBooks(booksGet));
 };
 
-export const createBook = (newBook)=> async (dispatch) => {
+export const createBook = (newBook) => async (dispatch) => {
   axios
     .post(
       'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KP5PI7hEkMIt6Rn76UzC/books',
