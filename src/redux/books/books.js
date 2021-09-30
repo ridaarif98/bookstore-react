@@ -15,9 +15,9 @@ export const addBook = (payload) => ({
   payload,
 });
 
-export const removeBook = (book) => ({
+export const removeBook = (id) => ({
   type: REMOVE_BOOK,
-  book,
+  id,
 });
 
 export const setBooks = (payload) => ({
@@ -30,7 +30,7 @@ const reducer = (state = initialState, action) => {
     case ADD_BOOK:
       return [...state, action.payload];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.book.id);
+      return state.filter((book) => book.item_id !== action.id);
     case SET_BOOKS:
       const savedBooks = Object.entries(action.payload).map(([key, value]) => ({
         item_id: key,

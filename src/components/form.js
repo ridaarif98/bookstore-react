@@ -64,6 +64,7 @@ const Form = () => {
   }
 
   const submitBookToStore = (e) => {
+    e.preventDefault();
     const book = {
       item_id: uuidv4(),
       title,
