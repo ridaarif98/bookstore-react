@@ -15,11 +15,23 @@ function Navbar() {
     },
   ];
   return (
-    <nav className="navbar">
-      <ul>
-        {links.map((link) => <li key={link.id}><Link to={link.path} className="links">{link.text}</Link></li>)}
-      </ul>
-    </nav>
+    <header>
+      <nav className="navbar">
+        <h1>BookStore CMS</h1>
+        <ul>
+          {links.map((link) => (
+            <li key={link.id}>
+              <Link to={link.path} className="links">
+                {link.text}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <div>
+        <i className="fa fa-user" />
+      </div>
+    </header>
   );
 }
 
