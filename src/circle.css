@@ -1,0 +1,18 @@
+  svg {
+    height: 100px;
+    width: 100px;
+  }
+  circle {
+    stroke-width: 6px;
+    fill: transparent;
+  }
+  #gray{
+    stroke: green;
+  }
+  #green{
+    stroke: #AAA;
+    stroke-dasharray: 100, 284; /* length of arc, circumference of circle */
+    stroke-dashoffset: 260.75; /* offset of arc from start point (1/2 arc length + 3/4 circumference) */
+  }
+  
+  
