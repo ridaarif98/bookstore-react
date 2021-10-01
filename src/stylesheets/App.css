@@ -235,18 +235,6 @@ header div i {
   padding-bottom: 20px;
 }
 
-.book-panel .secondDiv .chapter button {
-  border: none;
-  padding: 12px 30px;
-  border-radius: 4px;
-  background-color: #0290ff;
-  font-weight: 300;
-  font-size: 0.813rem;
-  letter-spacing: 0.5px;
-  text-align: center;
-  color: #fff;
-}
-
 .bookForm button {
   font-size: 13px;
   background: #f1f3f4;
@@ -259,6 +247,18 @@ header div i {
   width: 70px;
 }
 
+.book-panel .secondDiv .chapter button {
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  background-color: #0290ff;
+  font-weight: 300;
+  font-size: 0.813rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
 .formDiv {
   width: 85%;
   margin: 1.313rem 6.25rem;
@@ -269,7 +269,7 @@ header div i {
 .formDiv h1 {
   text-align: left;
   padding: 5px 10px;
-  color: #888888;
+  color: #888;
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: -0.18px;
@@ -290,7 +290,7 @@ header div i {
   width: 47%;
   font-size: 1rem;
   font-weight: normal;
-  padding: 8px 15px;
+  padding: 8px 15.5px;
   color: #c4c4c4;
   margin-right: 20px;
 }

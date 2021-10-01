@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteBook } from '../redux/api/api';
-import '../circle.css';
+import '../stylesheets/circle.css';
 
 const Book = ({ books }) => {
   const dispatch = useDispatch();
@@ -55,7 +55,7 @@ const Book = ({ books }) => {
           </div>
         </li>
       ))}
-      <div class="Line"></div>
+      <div class="Line" />
     </ul>
   );
 };

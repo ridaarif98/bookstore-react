@@ -29,7 +29,7 @@ function Navbar() {
         </ul>
       </nav>
       <div>
-        <i className="fa fa-user"></i>
+        <i className="fa fa-user" />
       </div>
     </header>
   );
