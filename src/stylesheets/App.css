@@ -283,7 +283,6 @@ header div i {
 }
 
 .bookForm .title {
-  padding: 10px 5px;
   border-radius: 4px;
   background-color: #fff;
   border: 1px solid #e8e8e8;
@@ -296,7 +295,6 @@ header div i {
 }
 
 .bookForm .category {
-  padding: 10px 5px;
   border-radius: 4px;
   background-color: #fff;
   border: 1px solid #e8e8e8;
