@@ -30,11 +30,6 @@ const reducer = (state = initialState, action) => {
         item_id: key,
         title: value[0].title,
         category: value[0].category,
-        author: 'Author undefiend',
-        progress: {
-          currentChapter: 'Introduction',
-          completed: '0',
-        },
       }));
     default:
       return state;

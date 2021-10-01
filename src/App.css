@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   background-color: #fafafa;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -66,6 +67,7 @@ header {
 .allBooks .book-panel {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 85%;
   height: 8.625rem;
   margin: 1.313rem 6.25rem;
@@ -139,6 +141,76 @@ header {
 
 .book-panel .firstDiv .bookButtons .lastBtn {
   border-right: none;
+}
+
+.book-panel .secondDiv {
+  background-color: inherit;
+  display: flex;
+  flex-direction: row;
+}
+
+.book-panel .secondDiv .progress {
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+  margin: 7px 10px;
+  border-right: 2px solid #e8e8e8;
+}
+
+.book-panel .secondDiv .progress h2 {
+  font-size: 2rem;
+  background-color: inherit;
+  padding: 5px;
+  opacity: 0.9;
+  font-weight: normal;
+}
+
+.book-panel .secondDiv .progress span {
+  background-color: inherit;
+  font-weight: normal;
+  color: #d4d1d1;
+  padding: 5px;
+}
+
+.book-panel .secondDiv .chapter {
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 25px;
+  margin-right: 50px;
+}
+
+.book-panel .secondDiv .chapter h4 {
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: 300;
+  letter-spacing: normal;
+  padding: 10px 0;
+  background-color: inherit;
+  text-align: left;
+}
+
+.book-panel .secondDiv .chapter span {
+  background-color: inherit;
+  font-size: 1.2rem;
+  text-align: left;
+  letter-spacing: -0.4px;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+.book-panel .secondDiv .chapter button {
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  background-color: #0290ff;
+  font-weight: 300;
+  font-size: 0.813rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
 }
 
 .bookForm button {

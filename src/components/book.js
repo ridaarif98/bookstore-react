@@ -19,7 +19,7 @@ const Book = ({ books }) => {
             {book.title}
           </h3>
           <span className="bookAuthor">
-            {book.author}
+            Author Undefined
           </span>
           <span className="bookButtons">
           <button type="button" id={book.item_id} className="bookBtn">
@@ -33,12 +33,27 @@ const Book = ({ books }) => {
           </button>
           </span>
           </div>
-          
-          <svg viewBox='0 0 100 100'>
+          <div className="secondDiv">
+          <svg viewBox='0 0 100 100' className="circle">
             <circle cx='50' cy='50' r='45' id='gray'/>
             <circle cx='50' cy='50' r='45' id='green'/>
           </svg>
-          
+
+         <div className="progress">
+           <h2>
+             64%
+           </h2>
+           <span>Completed</span>
+         </div>
+
+          <div className="chapter">
+          <h4>CURRENT CHAPTER</h4>
+          <span>
+            Introduction
+          </span>
+          <button type="button">UPDATE PROGRESS</button>
+          </div>
+          </div>
         </li>
       ))}
     </ul>
