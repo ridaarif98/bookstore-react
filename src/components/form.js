@@ -20,16 +20,20 @@ const Form = () => {
   };
 
   return (
+    <div className="formDiv">
+      <h1>ADD NEW BOOK</h1>
     <form onSubmit={submitBookToStore} className="bookForm">
       <input
+        className="title"
         type="text"
-        placeholder="title"
+        placeholder="Book title"
         value={title}
         name="title"
         required
         onChange={(e) => setTitle(e.target.value)}
       />
       <select
+        className="category"
         placeholder="Categorie"
         onChange={(e) => setCategory(e.target.value)}
       >
@@ -39,9 +43,10 @@ const Form = () => {
         <option value="Fairy Tales">Fairy Tales</option>
       </select>
       <button className="input-submit" type="submit">
-        Submit
+        ADD BOOK
       </button>
     </form>
+    </div>
   );
 };
 

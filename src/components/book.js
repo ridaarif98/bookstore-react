@@ -56,6 +56,7 @@ const Book = ({ books }) => {
           </div>
         </li>
       ))}
+      <div class="Line"></div>
     </ul>
   );
 };

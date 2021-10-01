@@ -8,6 +8,9 @@
 header {
   height: 4rem;
   margin: 0 0 2.375rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -62,6 +65,13 @@ header {
   list-style-type: none;
   text-align: center;
   padding: 0 20px;
+}
+
+.allBooks .Line {
+  width: 85%;
+  border: 1px solid #e8e8e8;
+  text-align: center;
+  margin: 1.313rem 6.25rem;
 }
 
 .allBooks .book-panel {
@@ -137,6 +147,10 @@ header {
   padding: 5px;
   border: none;
   border-right: 1px solid #e8e8e8;
+}
+
+.book-panel .firstDiv .bookButtons .bookBtn:hover {
+  color: #0962b1;
 }
 
 .book-panel .firstDiv .bookButtons .lastBtn {
@@ -225,19 +239,74 @@ header {
   width: 70px;
 }
 
+.formDiv {
+  width: 85%;
+  margin: 1.313rem 6.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.formDiv h1 {
+  text-align: left;
+  padding: 5px 10px;
+  color: #888888;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+}
+
 .bookForm {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  margin-top: 20px;
+  margin-left: 10px;
+  /* justify-content: center; */
 }
 
-.bookForm input {
+.bookForm .title {
   padding: 10px 5px;
-  margin: 2px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  width: 47%;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 8px 15px;
+  color: #c4c4c4;
+  margin-right: 20px;
 }
 
-.category {
-  display: flex;
-  justify-content: center;
+.bookForm .category {
+  padding: 10px 5px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  font-size: 1rem;
+  font-weight: normal;
+  width: 30%;
+  padding: 8px 15px;
+  color: #c4c4c4;
+  margin-right: 20px;
+}
+
+.bookForm .input-submit {
+  background-color: #0290ff;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.813rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  width: 15%;
+}
+
+.book-panel .secondDiv .chapter button:hover,
+.bookForm .input-submit:hover {
+  background-color: #0962b1;
+}
+
+.categoryBook {
+  text-align: center;
   padding: 20px;
 }
