@@ -19,13 +19,18 @@ function Navbar() {
       <nav className="navbar">
         <h1>BookStore CMS</h1>
         <ul>
-          {links.map((link) => <li key={link.id}><Link to={link.path} className="links">{link.text}</Link></li>)}
+          {links.map((link) => (
+            <li key={link.id}>
+              <Link to={link.path} className="links">
+                {link.text}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
       <div>
         <i className="fa fa-user"></i>
       </div>
-      
     </header>
   );
 }

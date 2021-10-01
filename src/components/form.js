@@ -22,30 +22,30 @@ const Form = () => {
   return (
     <div className="formDiv">
       <h1>ADD NEW BOOK</h1>
-    <form onSubmit={submitBookToStore} className="bookForm">
-      <input
-        className="title"
-        type="text"
-        placeholder="Book title"
-        value={title}
-        name="title"
-        required
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <select
-        className="category"
-        placeholder="Categorie"
-        onChange={(e) => setCategory(e.target.value)}
-      >
-        <option value="Action">Action</option>
-        <option value="Science Fiction">Science Fiction</option>
-        <option value="Economy">Economy</option>
-        <option value="Fairy Tales">Fairy Tales</option>
-      </select>
-      <button className="input-submit" type="submit">
-        ADD BOOK
-      </button>
-    </form>
+      <form onSubmit={submitBookToStore} className="bookForm">
+        <input
+          className="title"
+          type="text"
+          placeholder="Book title"
+          value={title}
+          name="title"
+          required
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <select
+          className="category"
+          placeholder="Categorie"
+          onChange={(e) => setCategory(e.target.value)}
+        >
+          <option value="Action">Action</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Economy">Economy</option>
+          <option value="Fairy Tales">Fairy Tales</option>
+        </select>
+        <button className="input-submit" type="submit">
+          ADD BOOK
+        </button>
+      </form>
     </div>
   );
 };

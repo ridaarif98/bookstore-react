@@ -8,31 +8,38 @@ with `react-redux` that allows you
 - Remove a selected book.
 - By building this application, you will learn how to use React and Redux.
 
-## Built with 
+## Live
+
+[Live Demo](https://ridaarif98.github.io/bookstore-react/)
+
+## Built with
 
 **React-Redux**
 
-## Getting Started 
+## Getting Started
+
 ### Setup
 
-- Open your terminal or command lines and copy these commands 
+- Open your terminal or command lines and copy these commands
 
- ```cmd 
-   git clone https://github.com/ridaarif98/bookstore-react.git
-   cd bookstore-react
-  ```
-### Install 
+```cmd
+  git clone https://github.com/ridaarif98/bookstore-react.git
+  cd bookstore-react
+```
 
-   ```cmd 
-   npm install
-   npm run build
-  ```
+### Install
 
-### Usage 
+```cmd
+npm install
+npm run build
+```
 
-  ```cmd
-  npm start
-  ```
+### Usage
+
+```cmd
+npm start
+```
+
 ## Author
 
 👤 **Rida Arif**
@@ -52,6 +59,7 @@ Feel free to check the [issues page](https://github.com/ridaarif98/bookstore-rea
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
+
 - Microverse for giving me this chance
 - To my Stand Up Team and coding partners who kept my morale up!
 - The amazing code reviewers for making me improve every day :thumbsup:
