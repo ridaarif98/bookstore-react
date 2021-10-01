@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaUser } from 'react-icons/fa';
 
 function Navbar() {
   const links = [
@@ -23,10 +22,10 @@ function Navbar() {
           {links.map((link) => <li key={link.id}><Link to={link.path} className="links">{link.text}</Link></li>)}
         </ul>
       </nav>
-
-      {/* <button className="userIcon">
-       <FaUser />
-      </button> */}
+      <div>
+        <i className="fa fa-user"></i>
+      </div>
+      
     </header>
   );
 }

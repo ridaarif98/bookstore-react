@@ -6,10 +6,12 @@
 }
 
 header {
-  height: 4rem;
+  height: 4.5rem;
   margin: 0 0 2.375rem;
+  padding: 0 6.25rem;
   display: flex;
   flex-direction: row;
+  text-align: center;
   justify-content: space-between;
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -24,6 +26,7 @@ header {
   font-weight: normal;
   color: #121212;
   letter-spacing: 1.9px;
+  text-align: center;
   padding: 12px 0;
 }
 
@@ -32,6 +35,7 @@ header {
   background-color: #fff;
   font-weight: bold;
   font-stretch: normal;
+  text-align: center;
   color: #0290ff;
   padding-left: 30px;
 }
@@ -57,6 +61,22 @@ header {
   text-decoration: none;
   background-color: #fff;
   color: #121212;
+}
+
+header div {
+  background-color: inherit;
+  height: 2rem;
+  margin: 9px 20px;
+  padding: 7px 10px;
+  border-radius: 50%;
+  border: 1px solid #e8e8e8;
+  font-size: 30px;
+  text-align: center;
+}
+
+header div i {
+  background-color: inherit;
+  color: #0290ff;
 }
 
 .allBooks {
